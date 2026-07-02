@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kanban + Excel Demo (GitHub Pages)</title>
+  <link rel="stylesheet" href="../kanban.css" />
+  <link rel="stylesheet" href="demo.css" />
+</head>
+<body class="demo-body">
+  <!-- Encabezado principal unificado -->
+  <div class="demo-main-header">
+    <h1>Demo Interactiva: Kanban en Excel</h1>
+    <button id="btnRefresh">Actualizar desde Excel</button>
+  </div>
+
+  <div class="demo-container">
+    <!-- Sección del Kanban interactivo -->
+    <div class="demo-kanban-section">
+      <div class="kanban">
+        <!-- Columna NUEVOS -->
+        <div class="column">
+          <div class="column-header">
+            <h3>Nuevos</h3>
+            <span class="badge" id="count-nuevo">0</span>
+          </div>
+          <div class="cards" id="Nuevo"></div>
+        </div>
+
+        <!-- Columna CONTACTADOS -->
+        <div class="column">
+          <div class="column-header">
+            <h3>Contactados</h3>
+            <span class="badge" id="count-contactado">0</span>
+          </div>
+          <div class="cards" id="Contactado"></div>
+        </div>
+
+        <!-- Columna PROPUESTA -->
+        <div class="column">
+          <div class="column-header">
+            <h3>Propuesta</h3>
+            <span class="badge" id="count-propuesta">0</span>
+          </div>
+          <div class="cards" id="Propuesta"></div>
+        </div>
+
+        <!-- Columna CERRADOS -->
+        <div class="column">
+          <div class="column-header">
+            <h3>Cerrados</h3>
+            <span class="badge" id="count-cerrado">0</span>
+          </div>
+          <div class="cards" id="Cerrado"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de la simulación de Excel -->
+    <div class="demo-excel-section">
+      <div class="excel-header-title">
+        <img src="excel-logo.png" alt="Excel Logo" class="excel-logo" />
+        <h2>Tabla de Actividades (Simulación de Excel)</h2>
+      </div>
+      <div class="table-responsive">
+        <table id="activity-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>TÍTULO</th>
+              <th>EMPRESA</th>
+              <th>MONTO</th>
+              <th>PRIORIDAD</th>
+              <th>ESTADO</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="demo.js"></script>
+</body>
+</html>
