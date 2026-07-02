@@ -18,7 +18,7 @@ Mira el desarrollo paso a paso y aprende cómo configurarlo en tu Excel:
 ## 🌐 Demo en Vivo
 
 Puedes ver una simulación interactiva de cómo funciona este Kanban (sincronizándose con una tabla de Excel interactiva) sin necesidad de abrir Excel, haciendo clic aquí:
-👉 **[Ver Demo Interactiva en Vivo](https://<TU_USUARIO_GITHUB>.github.io/excel-kanban-addin/demo/)**
+👉 **[Ver Demo Interactiva en Vivo](https://intef-dev.github.io/excel-kanban-addin/demo/)**
 
 ---
 
@@ -26,7 +26,7 @@ Puedes ver una simulación interactiva de cómo funciona este Kanban (sincroniz�
 
 Si prefieres descargar todos los archivos juntos en un archivo comprimido ZIP para importarlos de golpe, haz clic en el siguiente botón:
 
-[![Descargar ZIP](https://img.shields.io/badge/Descargar-Proyecto_ZIP-blue?style=for-the-badge&logo=github)](https://github.com/<TU_USUARIO_GITHUB>/excel-kanban-addin/releases/download/v1.0/kanban-addin.zip)
+[![Descargar ZIP](https://img.shields.io/badge/Descargar-Proyecto_ZIP-blue?style=for-the-badge&logo=github)](https://github.com/intef-dev/excel-kanban-addin/releases/download/v1.0/kanban-addin.zip)
 
 ---
 
