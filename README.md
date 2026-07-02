@@ -62,6 +62,15 @@ Para enterarte de nuevos tutoriales, trucos rápidos de Excel, macros y automati
 
 ---
 
+## ☕ Apoya este proyecto
+
+Si este complemento te ha sido de utilidad y quieres apoyar la creación de más contenido gratuito y plantillas automatizadas, puedes realizar una donación voluntaria en los siguientes enlaces:
+
+- 💳 **PayPal:** [Donar por PayPal.Me](https://www.paypal.com/paypalme/INTEFDonativo)
+- ☕ **Buy Me a Coffee:** [Apoyar en Buy Me a Coffee](https://buymeacoffee.com/inteligenciaeficiente)
+
+---
+
 ## 📄 Licencia
 
 Este proyecto está bajo la licencia **MIT**, lo que significa que eres libre de usar, modificar y distribuir el código como desees, incluso para fines comerciales. Consulta el archivo [LICENSE](/LICENSE) para más detalles.
