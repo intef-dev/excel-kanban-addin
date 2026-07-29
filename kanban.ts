@@ -93,13 +93,15 @@ function iniciarKanban(): void {
     });
 
     // Acciones al realizar cuando el usuario suelte el elemento
-    columna.addEventListener("drop", async () => {
-      // Validar que una tarjeta fue arrastrada
-      if (!cardArrastrada) {
+    columna.addEventListener("drop", async (e: DragEvent) => {
+      e.preventDefault();
+      // [29-jul-2026] Obtener ID desde dataTransfer o cardArrastrada como respaldo de compatibilidad
+      const rawId = e.dataTransfer?.getData("text/plain") || cardArrastrada?.dataset.id;
+      if (!rawId) {
         return;
       }
       // Obtener el id y el item
-      const id = Number(cardArrastrada.dataset.id);
+      const id = Number(rawId);
       const item = items.find((x) => x.id === id);
       //Validar que el item existe
       if (!item) {
@@ -107,7 +109,7 @@ function iniciarKanban(): void {
       }
       //Actualizar estado
       item.estado = columna.id as Item["estado"];
-      // Pendiente: Guardar en la tabla original
+      // Guardar en la tabla original
       guardarEstado(item.id, item.estado);
       renderizarKanban();
     });
@@ -182,12 +184,19 @@ function renderizarKanban(): void {
       </div>
     `;
 
-    card.addEventListener("dragstart", () => {
+    card.addEventListener("dragstart", (e: DragEvent) => {
       cardArrastrada = card;
+      // [29-jul-2026] setData es obligatorio en Chromium/WebView2 reciente para validar la operación de soltar
+      if (e.dataTransfer) {
+        e.dataTransfer.setData("text/plain", item.id.toString());
+      }
     });
 
     card.addEventListener("dragend", () => {
-      cardArrastrada = null;
+      // [29-jul-2026] setTimeout previene limpiar la tarjeta si dragend se dispara antes que drop
+      setTimeout(() => {
+        cardArrastrada = null;
+      }, 50);
     });
 
     const targetColumn = document.getElementById(item.estado);
